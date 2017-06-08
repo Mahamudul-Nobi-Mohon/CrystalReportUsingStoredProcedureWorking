@@ -16,14 +16,14 @@ namespace CrystalReportDemo5.Reports {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class CrystalReport1 : ReportClass {
+    public class EmployeeSalaryCrystalReport : ReportClass {
         
-        public CrystalReport1() {
+        public EmployeeSalaryCrystalReport() {
         }
         
         public override string ResourceName {
             get {
-                return "CrystalReport1.rpt";
+                return "EmployeeSalaryCrystalReport.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace CrystalReportDemo5.Reports {
         
         public override string FullResourceName {
             get {
-                return "CrystalReportDemo5.Reports.CrystalReport1.rpt";
+                return "CrystalReportDemo5.Reports.EmployeeSalaryCrystalReport.rpt";
             }
             set {
                 // Do nothing
@@ -106,9 +106,9 @@ namespace CrystalReportDemo5.Reports {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedCrystalReport1 : Component, ICachedReport {
+    public class CachedEmployeeSalaryCrystalReport : Component, ICachedReport {
         
-        public CachedCrystalReport1() {
+        public CachedEmployeeSalaryCrystalReport() {
         }
         
         [Browsable(false)]
@@ -145,7 +145,7 @@ namespace CrystalReportDemo5.Reports {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            CrystalReport1 rpt = new CrystalReport1();
+            EmployeeSalaryCrystalReport rpt = new EmployeeSalaryCrystalReport();
             rpt.Site = this.Site;
             return rpt;
         }

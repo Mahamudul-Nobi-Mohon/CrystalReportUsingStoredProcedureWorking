@@ -30,7 +30,7 @@ namespace CrystalReportDemo5
         private void ShowReport(DataTable dtReportData)
         {
             ReportDocument rdoc = new ReportDocument();
-            rdoc.Load(@"Reports\CrystalReport1.rpt");
+            rdoc.Load(@"c:\\myReports\EmployeeSalaryCrystalReport.rpt");
             rdoc.SetDataSource(dtReportData);
             crystalReportViewer1.ReportSource = rdoc;
         }
